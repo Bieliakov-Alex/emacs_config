@@ -1,0 +1,60 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/aleksss/.emacs.d/" . "auto-save-list/")
+ ("/home/" . "aleksss/")
+ ("/home/aleksss/" . ".emacs.d/")
+ ("/home/aleksss/Downloads/emacs.d-master/" . ".emacs.d-master/")
+ ("/home/aleksss/Downloads/" . "emacs.d-master/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/aleksss/.emacs.d/"
+ "/home/aleksss/"
+ "/home/aleksss/example/"
+ "/home/aleksss/example/build/"
+ "/home/aleksss/Downloads/emacs.d-master/.emacs.d-master/"
+ "/home/aleksss/Downloads/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "settings.org"
+ "main.cpp"
+ "init.el"
+ "hw.cpp"
+ ".clang_complete"
+ "examples.desktop"
+ "someheader.h"
+ "CMakeLists.txt"
+ "emacs.d-master.zip"
+ "settings.el"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/aleksss/" (23691 33619 277484 174000) "Videos/" ".profile" ".clang_complete" ".bash_history" ".ssh/" "Desktop/" "Pictures/" "demo/" "ycmd/" "Downloads/" "examples.desktop" "example/" "ripgrep_0.10.0_amd64.deb" ".bash_logout" ".mozilla/" "settings.org" ".ICEauthority" ".emacs.d/" "flycheck-ycmd.el" ".python_history" "Documents/" "../" "main.cpp~" ".emacs~" "Public/" "main.cpp" "Music/" "init.el" "./" ".config/" ".gnupg/" ".cache/" ".ycm_extra_conf.py" ".sudo_as_admin_successful" ".bashrc" "Templates/" ".local/")
+
+ ("/home/aleksss/.emacs.d/" (23690 15662 99667 228000) "auto-save-list/" "elpa/" "ido.last" "settings.org" "recentf" "transient/" "../" "snippets/" "settings.el" "init.el" "irony/" "./" "history")
+
+ ("/home/aleksss/example/" (23689 14043 848469 305000) ".clang_complete" "../" "hw.cpp" "./")
+
+ ("/home/aleksss/example/build/" (23689 12714 607324 475000) ".clang_complete" "cmake_install.cmake" "Makefile" "../" "CMakeCache.txt" "./" "CMakeFiles/" "hello")
+
+ ("/home/aleksss/Downloads/" (23689 8382 23899 427000) "clang_complete-master.zip" "../" "./" "clang_complete-master/" "emacs.d-master/" "emacs.d-master.zip")
+
+ ("/home/aleksss/.emacs.d/auto-save-list/" (23689 4818 259271 782000) "../" ".saves-7239-aleksss-VirtualBox~" "./")
+
+ ("/home/aleksss/Downloads/emacs.d-master/.emacs.d-master/" (23688 63860 157620 724000) "places" "auto-save-list/" "elpa/" "ido.last" ".gitignore" "settings.org" "recentf" "../" "settings.el" "#settings.org#" "README.md" "init.el" "./" "history")
+
+ ("/home/aleksss/ycmd/" (23681 6883 318891 436000) "test_requirements.txt" "DEBUG.md" "PYTHON_USED_DURING_BUILDING" "style_format.sh" "CONTRIBUTING.md" "benchmark.py" "ci/" "COPYING.txt" "ycmd/" "examples/" "CORE_VERSION" "update_boost.py" ".git/" "update_unicode.py" ".gitmodules" ".gitignore" "third_party/" "tox.ini" "build.py" "update_clangd.py" ".clang-tidy" "codecov.yml" "../" "clang_archives/" ".coveragerc" "cpp/" "ycm_core.so" "CODE_OF_CONDUCT.md" "update_api_docs.py" "TESTS.md" "docs/" "README.md" "appveyor.yml" "./" "JAVA_SUPPORT.md" "update_clang.py" "run_tests.py" ".ycm_extra_conf.py" ".travis.yml" ".circleci/")
+
+ ("/home/" (23677 2519 11344 944000) "../" "aleksss/" "./")
+
+ ("/home/aleksss/Downloads/emacs.d-master/" (23681 14042 102963 449000) ".emacs.d-master/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
