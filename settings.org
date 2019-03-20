@@ -1,14 +1,15 @@
+* use package
+*** code
+#+BEGIN_SRC emacs-lisp
+(require 'use-package)
+#+END_SRC
 * packages
-
 ** melpa
-
 #+BEGIN_SRC emacs-lisp
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/" ) t)
 (package-initialize)
 #+END_SRC
-
-* variabales for modes
-  
+* variabales for modes  
 ** settings
 *** code
 #+BEGIN_SRC emacs-lisp
@@ -33,14 +34,10 @@
 (desktop-save-mode 1)
 #+END_SRC
 
-
 ** ido
-
 *** description
     Interactive-DO.
-
 *** codes
-
 #+BEGIN_SRC emacs-lisp
 (ido-mode 1)
 (setq ido-everywhere t)
@@ -48,17 +45,13 @@
 (setq ido-use-filename-at-point 'guess)
 (setq ido-create-new-buffer 'always)
 (setq ido-file-extension-order '(".org" ".txt" ".csv"))
-
 #+END_SRC
 
-
 ** winner mode
-
 *** code
 #+BEGIN_SRC emacs-lisp
 (winner-mode 1)
 #+END_SRC
-
 
 ** hide show mode
 *** code
@@ -71,25 +64,26 @@
 #+END_SRC
 
 * installed packages
-
 ** ido describe binding
-
 ** ido grid mode
 #+BEGIN_SRC emacs-lisp
 (ido-grid-mode 1)
 #+END_SRC
 
 ** cycle themes
+*** code
 #+BEGIN_SRC emacs-lisp
+(use-package cycle-themes
+:init 
 (setq cycle-themes-theme-list '(exotica dracula))
-(require 'cycle-themes)
-(cycle-themes-mode)
+:config
+(cycle-themes-mode))
 #+END_SRC
-
 ** org bullets
 #+BEGIN_SRC emacs-lisp
-(require 'org-bullets)
-(add-hook 'org-mode-hook (lambda() (org-bullets-mode 1)))
+(use-package org-bullets
+:init
+(add-hook 'org-mode-hook (lambda() (org-bullets-mode 1))))
 #+END_SRC
 
 ** ivy + swiper + counsel
@@ -97,97 +91,129 @@
 
 *** codes
 #+BEGIN_SRC emacs-lisp
+(use-package ivy
+:init
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
-(global-set-key "\C-s" 'swiper)
-(global-set-key (kbd "C-c C-r") 'ivy-resume)
-(global-set-key (kbd "<f6>") 'ivy-resume)
-(global-set-key (kbd "M-x") 'counsel-M-x)
+:bind
+(
+("\C-s" . swiper)
+("C-c C-r" . ivy-resume)
+("<f6>" . ivy-resume)
+("M-x" . counsel-M-x)
 ;(global-set-key (kbd "C-x C-f") 'counsel-find-file) ;;; keep IDO mode for find file
-(global-set-key (kbd "C-y") 'counsel-yank-pop)
-(global-set-key (kbd "<f1> f") 'counsel-describe-function)
-(global-set-key (kbd "<f1> v") 'counsel-describe-variable)
-(global-set-key (kbd "<f1> l") 'counsel-find-library)
-(global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
-(global-set-key (kbd "<f2> u") 'counsel-unicode-char)
-(global-set-key (kbd "C-c g") 'counsel-git)
-(global-set-key (kbd "C-c j") 'counsel-git-grep)
-(global-set-key (kbd "C-c k") 'counsel-ag)
-(global-set-key (kbd "C-x l") 'counsel-locate)
-(global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
-(define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
+("C-y" . counsel-yank-pop)
+("<f1> f" . counsel-describe-function)
+("<f1> v" . counsel-describe-variable)
+("<f1> l" . counsel-find-library)
+("<f2> i" . counsel-info-lookup-symbol)
+("<f2> u" . counsel-unicode-char)
+("C-c g" . counsel-git)
+("C-c j" . counsel-git-grep)
+("C-c k" . counsel-ag)
+("C-x l" . counsel-locate)
+("C-S-o" . counsel-rhythmbox)
+:map minibuffer-local-map
+("C-r" . counsel-minibuffer-history))
+)
 #+END_SRC
 
 ** magit
-
 *** code
 #+BEGIN_SRC emacs-lisp
-(require 'magit)
-(global-set-key (kbd "C-x g") 'magit-status)
+(use-package magit
+:bind
+("C-x g" . magit-status)
+)
 #+END_SRC
 
 ** iedit
 *** code
 #+BEGIN_SRC emacs-lisp
-(require 'iedit)
+(use-package iedit)
 #+END_SRC
 ** paredit
 *** code
 #+BEGIN_SRC emacs-lisp
-(require 'paredit)
-(add-hook 'emacs-startup-hook
-(lambda ()
+;(require 'paredit)
+;(paredit-mode 1)
+;(global-set-key (kbd "C-<left>") 'paredit-forward-slurp-sexp)
+;(global-set-key (kbd "C-M-<left>") 'paredit-backward-slurp-sexp)
+;(global-set-key (kbd "C-<right>") 'paredit-forward-barf-sexp)
+;(global-set-key (kbd "C-M-<right>") 'paredit-backward-barf-sexp)
+;(global-set-key (kbd "M-S") 'paredit-split-sexp)
+;(global-set-key (kbd "M-J") 'paredit-join-sexp)
+
+(use-package paredit
+:init
 (paredit-mode 1)
-))
-(global-set-key (kbd "C-<left>") 'paredit-forward-slurp-sexp)
-(global-set-key (kbd "C-M-<left>") 'paredit-backward-slurp-sexp)
-(global-set-key (kbd "C-<right>") 'paredit-forward-barf-sexp)
-(global-set-key (kbd "C-M-<right>") 'paredit-backward-barf-sexp)
-(global-set-key (kbd "M-S") 'paredit-split-sexp)
-(global-set-key (kbd "M-J") 'paredit-join-sexp)
+(add-hook 'after-init-hook 'enable-paredit-mode)
+:bind
+("C-<left>" . paredit-forward-slurp-sexp)
+("C-M-<left>" . paredit-backward-slurp-sexp)
+("C-<right>" . paredit-forward-barf-sexp)
+("C-M-<right>" . paredit-backward-barf-sexp)
+("M-S" . paredit-split-sexp)
+("M-J" . paredit-join-sexp)
+)
 #+END_SRC
 
 ** irony
 *** code
 #+BEGIN_SRC emacs-lisp
-(add-hook 'c++-mode-hook 'irony-mode)
-(add-hook 'c-mode-hook 'irony-mode)
-(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+(use-package irony
+:hook
+(
+(c++-mode . irony-mode)
+(c-mode . irony-mode)
+(irony . irony-cdb-autosetup-compile-options)
+))
 #+END_SRC
 ** company
 *** code
 #+BEGIN_SRC emacs-lisp
-(add-hook 'after-init-hook 'global-company-mode)
+(use-package company
+:hook
+(after-init . global-company-mode)
+:config
 (global-company-mode t)
 (setq company-minimum-prefix-length 1)
 (setq company-idle-delay 0)
+)
 #+END_SRC
 ** company quickhelp
 *** code
 #+BEGIN_SRC emacs-lisp
+(use-package company-quickhelp
+:init
 (company-quickhelp-mode 1)
+:config
 (setq company-quickhelp-delay 0)
+)
 #+END_SRC
 ** company irony
 *** code
 #+BEGIN_SRC emacs-lisp
-(eval-after-load 'company
-'(add-to-list 'company-backends 'company-irony))
+(use-package company-irony
+:after company
+:init
+(add-to-list 'company-backends 'company-irony))
 #+END_SRC
 ** company irony c headers
 *** code
 #+BEGIN_SRC emacs-lisp
-(require 'company-irony-c-headers)
-(eval-after-load 'company
-'(add-to-list
+(use-package company-irony-c-headers
+:after company
+:init
+(add-to-list
 'company-backends '(company-irony-c-headers company-irony)))
-
 #+END_SRC
 ** yasnippet
 *** code
 #+BEGIN_SRC emacs-lisp
-(require 'yasnippet)
+(use-package yasnippet
+:init
 (yas-global-mode 1)
 (defun check-expansion ()
     (save-excursion
@@ -210,9 +236,9 @@
           (if (check-expansion)
               (company-complete-common)
             (indent-for-tab-command)))))
-
-  (global-set-key [tab] 'tab-indent-or-complete)
-
+:bind
+  ([tab] . tab-indent-or-complete)
+)
 #+END_SRC
 ** yasnippet snippets
 ** ivy yasnippet

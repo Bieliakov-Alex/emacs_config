@@ -4,13 +4,14 @@
 (
  ("/home/aleksss/.emacs.d/" . "auto-save-list/")
  ("/home/" . "aleksss/")
- ("/home/aleksss/" . ".emacs.d/")
+ ("/home/aleksss/" . ".emacs.d_1/")
  ("/home/aleksss/Downloads/emacs.d-master/" . ".emacs.d-master/")
  ("/home/aleksss/Downloads/" . "emacs.d-master/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/aleksss/.emacs.d_1/"
  "/home/aleksss/.emacs.d/"
  "/home/aleksss/"
  "/home/aleksss/example/"
@@ -35,9 +36,11 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/aleksss/" (23691 33619 277484 174000) "Videos/" ".profile" ".clang_complete" ".bash_history" ".ssh/" "Desktop/" "Pictures/" "demo/" "ycmd/" "Downloads/" "examples.desktop" "example/" "ripgrep_0.10.0_amd64.deb" ".bash_logout" ".mozilla/" "settings.org" ".ICEauthority" ".emacs.d/" "flycheck-ycmd.el" ".python_history" "Documents/" "../" "main.cpp~" ".emacs~" "Public/" "main.cpp" "Music/" "init.el" "./" ".config/" ".gnupg/" ".cache/" ".ycm_extra_conf.py" ".sudo_as_admin_successful" ".bashrc" "Templates/" ".local/")
+ ("/home/aleksss/.emacs.d_1/" (23698 12453 574106 106000) "auto-save-list/" ".git/" "elpa/" "ido.last" "settings.org" "recentf" "transient/" "../" "snippets/" ".emacs.desktop" "settings.el" "#init.el#" "#settings.org#" "init.el" "irony/" "./" "history")
 
- ("/home/aleksss/.emacs.d/" (23690 15662 99667 228000) "auto-save-list/" "elpa/" "ido.last" "settings.org" "recentf" "transient/" "../" "snippets/" "settings.el" "init.el" "irony/" "./" "history")
+ ("/home/aleksss/" (23698 12470 162006 201000) "Videos/" ".profile" ".clang_complete" ".bash_history" ".ssh/" "Desktop/" "Pictures/" "demo/" "ycmd/" "Downloads/" "examples.desktop" "example/" ".emacs.d_1/" "ripgrep_0.10.0_amd64.deb" ".bash_logout" ".mozilla/" "settings.org" ".ICEauthority" ".emacs.d/" "flycheck-ycmd.el" ".python_history" "Documents/" "../" "main.cpp~" ".gitconfig" "Public/" "main.cpp" "Music/" "./" ".config/" ".gnupg/" ".cache/" ".ycm_extra_conf.py" ".sudo_as_admin_successful" ".bashrc" "Templates/" ".local/")
+
+ ("/home/aleksss/.emacs.d/" (23698 12510 301764 406000) "auto-save-list/" ".git/" "elpa/" "ido.last" "settings.org" "recentf" "transient/" "../" ".emacs.desktop.lock" "snippets/" ".emacs.desktop" "settings.el" "init.el" "irony/" "./" "history")
 
  ("/home/aleksss/example/" (23689 14043 848469 305000) ".clang_complete" "../" "hw.cpp" "./")
 
