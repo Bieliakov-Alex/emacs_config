@@ -1,0 +1,3 @@
+1. Install use-package from MELPA
+2. (Temp) Install ido-grid-mode (remove after adding helm)
+3. M-x irony-install-server
