@@ -2,61 +2,30 @@
 
 ;; ----- ido-last-directory-list -----
 (
- ("/home/aleksss/.emacs.d/" . "auto-save-list/")
- ("/home/" . "aleksss/")
- ("/home/aleksss/" . ".emacs.d_1/")
- ("/home/aleksss/Downloads/emacs.d-master/" . ".emacs.d-master/")
- ("/home/aleksss/Downloads/" . "emacs.d-master/")
+ ("/home/aleksss/" . "example/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
- "/home/aleksss/.emacs.d_1/"
- "/home/aleksss/.emacs.d/"
- "/home/aleksss/"
  "/home/aleksss/example/"
- "/home/aleksss/example/build/"
- "/home/aleksss/Downloads/emacs.d-master/.emacs.d-master/"
- "/home/aleksss/Downloads/"
+ "/home/aleksss/.emacs.d/"
 )
 
 ;; ----- ido-work-file-list -----
 (
- "settings.org"
- "main.cpp"
- "init.el"
+ "new2.cpp"
+ "new.cpp"
  "hw.cpp"
- ".clang_complete"
- "examples.desktop"
- "someheader.h"
- "CMakeLists.txt"
- "emacs.d-master.zip"
- "settings.el"
+ "settings.org"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/aleksss/.emacs.d_1/" (23698 12453 574106 106000) "auto-save-list/" ".git/" "elpa/" "ido.last" "settings.org" "recentf" "transient/" "../" "snippets/" ".emacs.desktop" "settings.el" "#init.el#" "#settings.org#" "init.el" "irony/" "./" "history")
+ ("/home/aleksss/.emacs.d/" (23698 30047 737069 5000) "auto-save-list/" ".git/" "elpa/" "ido.last" "settings.org" "recentf" "transient/" "../" ".emacs.desktop.lock" "snippets/" ".emacs.desktop" "settings.el" "init.el" "irony/" "./" "history")
 
- ("/home/aleksss/" (23698 12470 162006 201000) "Videos/" ".profile" ".clang_complete" ".bash_history" ".ssh/" "Desktop/" "Pictures/" "demo/" "ycmd/" "Downloads/" "examples.desktop" "example/" ".emacs.d_1/" "ripgrep_0.10.0_amd64.deb" ".bash_logout" ".mozilla/" "settings.org" ".ICEauthority" ".emacs.d/" "flycheck-ycmd.el" ".python_history" "Documents/" "../" "main.cpp~" ".gitconfig" "Public/" "main.cpp" "Music/" "./" ".config/" ".gnupg/" ".cache/" ".ycm_extra_conf.py" ".sudo_as_admin_successful" ".bashrc" "Templates/" ".local/")
+ ("/home/aleksss/example/" (23698 29749 426158 712000) "CMakeLists.txt" "Debug/" "../" "hw.cpp" "./" "Release/")
 
- ("/home/aleksss/.emacs.d/" (23698 12510 301764 406000) "auto-save-list/" ".git/" "elpa/" "ido.last" "settings.org" "recentf" "transient/" "../" ".emacs.desktop.lock" "snippets/" ".emacs.desktop" "settings.el" "init.el" "irony/" "./" "history")
-
- ("/home/aleksss/example/" (23689 14043 848469 305000) ".clang_complete" "../" "hw.cpp" "./")
-
- ("/home/aleksss/example/build/" (23689 12714 607324 475000) ".clang_complete" "cmake_install.cmake" "Makefile" "../" "CMakeCache.txt" "./" "CMakeFiles/" "hello")
-
- ("/home/aleksss/Downloads/" (23689 8382 23899 427000) "clang_complete-master.zip" "../" "./" "clang_complete-master/" "emacs.d-master/" "emacs.d-master.zip")
-
- ("/home/aleksss/.emacs.d/auto-save-list/" (23689 4818 259271 782000) "../" ".saves-7239-aleksss-VirtualBox~" "./")
-
- ("/home/aleksss/Downloads/emacs.d-master/.emacs.d-master/" (23688 63860 157620 724000) "places" "auto-save-list/" "elpa/" "ido.last" ".gitignore" "settings.org" "recentf" "../" "settings.el" "#settings.org#" "README.md" "init.el" "./" "history")
-
- ("/home/aleksss/ycmd/" (23681 6883 318891 436000) "test_requirements.txt" "DEBUG.md" "PYTHON_USED_DURING_BUILDING" "style_format.sh" "CONTRIBUTING.md" "benchmark.py" "ci/" "COPYING.txt" "ycmd/" "examples/" "CORE_VERSION" "update_boost.py" ".git/" "update_unicode.py" ".gitmodules" ".gitignore" "third_party/" "tox.ini" "build.py" "update_clangd.py" ".clang-tidy" "codecov.yml" "../" "clang_archives/" ".coveragerc" "cpp/" "ycm_core.so" "CODE_OF_CONDUCT.md" "update_api_docs.py" "TESTS.md" "docs/" "README.md" "appveyor.yml" "./" "JAVA_SUPPORT.md" "update_clang.py" "run_tests.py" ".ycm_extra_conf.py" ".travis.yml" ".circleci/")
-
- ("/home/" (23677 2519 11344 944000) "../" "aleksss/" "./")
-
- ("/home/aleksss/Downloads/emacs.d-master/" (23681 14042 102963 449000) ".emacs.d-master/" "../" "./")
+ ("/home/aleksss/" (23698 23835 630845 712000) "Videos/" ".profile" ".clang_complete" ".bash_history" ".ssh/" "Desktop/" "Pictures/" "demo/" "ycmd/" "Downloads/" "examples.desktop" "example/" "ripgrep_0.10.0_amd64.deb" ".bash_logout" ".mozilla/" "settings.org" ".ICEauthority" ".emacs.d/" "flycheck-ycmd.el" ".python_history" "Documents/" "../" "main.cpp~" ".emacs.d_b2/" ".emacs.d_b/" ".gitconfig" "Public/" "main.cpp" "Music/" "./" ".config/" ".gnupg/" ".cache/" ".ycm_extra_conf.py" ".sudo_as_admin_successful" ".bashrc" "Templates/" ".local/")
 )
 
 ;; ----- ido-unc-hosts-cache -----

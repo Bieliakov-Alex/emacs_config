@@ -2,90 +2,66 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Wed Mar 20 14:32:10 2019
+;; Created Wed Mar 20 19:17:56 2019
 ;; Desktop file format version 208
 ;; Emacs version 26.1
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (23698 13002 21587 326000) (desktop . "208") "aleksss@aleksss-VirtualBox" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font-backend xft x) (font . "-DAMA-Ubuntu Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1") (font-parameter . "Ubuntu Mono 13") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#f8f8f2") (background-color . "#282a36") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen . maximized) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . dark) (cursor-color . "#ccccc7") (sticky) (environment) (frameset--id . "027C-E32C-C194-8D2A") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (height . 52) (width . 204) (left . 67) (top . 27)) ((min-height . 8) (min-width . 20) (min-height-ignore . 7) (min-width-ignore . 14) (min-height-safe . 2) (min-width-safe . 4) (min-pixel-height . 144) (min-pixel-width . 180) (min-pixel-height-ignore . 126) (min-pixel-width-ignore . 126) (min-pixel-height-safe . 36) (min-pixel-width-safe . 36)) vc (pixel-width . 1853) (pixel-height . 935) (total-width . 206) (total-height . 52) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (hc (pixel-width . 1853) (pixel-height . 504) (total-width . 206) (total-height . 28) (normal-height . 0.5428571428571429) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 926) (pixel-height . 504) (total-width . 103) (total-height . 28) (normal-height . 1.0) (normal-width . 0.5) (buffer "hw.cpp" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 2) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 206) (start . 1))) (leaf (last . t) (pixel-width . 927) (pixel-height . 504) (total-width . 103) (total-height . 28) (normal-height . 1.0) (normal-width . 0.5) (buffer "*Packages*" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 4) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 386481) (start . 385504)))) (hc (last . t) (pixel-width . 1853) (pixel-height . 431) (total-width . 206) (total-height . 24) (normal-height . 0.45714285714285713) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 909) (pixel-height . 431) (total-width . 101) (total-height . 24) (normal-height . 1.0) (normal-width . 0.48913043478260865) (buffer "settings.org<.emacs.d>" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins 3) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 79) (start . 1))) (leaf (last . t) (pixel-width . 944) (pixel-height . 431) (total-width . 105) (total-height . 24) (normal-height . 1.0) (normal-width . 0.5108695652173914) (buffer "settings.org<.emacs.d_1>" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 3) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 1597) (start . 1))))))])
+(setq desktop-saved-frameset [frameset 1 (23698 30148 670052 979000) (desktop . "208") "aleksss@aleksss-VirtualBox" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font-backend xft x) (font . "-DAMA-Ubuntu Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1") (font-parameter . "Ubuntu Mono 13") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#f8f8f2") (background-color . "#282a36") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen . maximized) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . dark) (cursor-color . "#ccccc7") (sticky) (environment) (frameset--id . "421B-EAE5-F137-AABF") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (height . 52) (width . 204) (left . 67) (top . 27)) ((min-height . 8) (min-width . 10) (min-height-ignore . 6) (min-width-ignore . 7) (min-height-safe . 2) (min-width-safe . 2) (min-pixel-height . 144) (min-pixel-width . 90) (min-pixel-height-ignore . 108) (min-pixel-width-ignore . 63) (min-pixel-height-safe . 36) (min-pixel-width-safe . 18)) vc (pixel-width . 1853) (pixel-height . 935) (total-width . 205) (total-height . 52) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 1853) (pixel-height . 467) (total-width . 205) (total-height . 26) (normal-height . 0.5) (normal-width . 1.0) (buffer "new2.cpp" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 1) (start . 1))) (leaf (last . t) (pixel-width . 1853) (pixel-height . 468) (total-width . 205) (total-height . 26) (normal-height . 0.5) (normal-width . 1.0) (buffer "settings.org" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 3) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 3223) (start . 1)))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
-(setq search-ring '("use-package"))
-(setq regexp-search-ring '("theme" "neot"))
+(setq search-ring nil)
+(setq regexp-search-ring nil)
 (setq register-alist nil)
-(setq file-name-history '("/home/aleksss/.emacs.d_1/settings.org" "/home/aleksss/.emacs.d/settings.org" "/home/aleksss/example/build/" "/home/aleksss/example/" "/home/aleksss/example/build" "/home/aleksss/example/CMakeLists.txt" "/home/aleksss/example/" "/home/aleksss/example/.clang_complete" "/home/aleksss/.emacs.d/settings.org" "/home/aleksss/main.cpp" "/home/aleksss/.emacs.d/init.el" "/home/aleksss/.emacs.d/settings.org" "/home/aleksss/main.cpp" "/home/aleksss/.emacs.d/init.el" "/home/aleksss/.emacs.d/settings.org" "/home/aleksss/main.cpp" "/home/aleksss/.emacs.d/init.el" "/home/aleksss/main.cpp" "/home/aleksss/.emacs.d/settings.org" "/home/aleksss/.emacs.d/init.el" "/home/aleksss/example/hw.cpp" "/home/aleksss/example/.clang_complete" "/home/aleksss/example/hw.cpp" "/home/aleksss/examples.desktop" "/home/aleksss/.emacs.d/settings.org" "/home/aleksss/example/hw.cpp" "/home/aleksss/example/.clang_complete" "/home/aleksss/example/hw.cpp" "/home/aleksss/.emacs.d/settings.org" "/home/aleksss/example/.clang_complete" "/home/aleksss/example/hw.cpp" "/home/aleksss/.emacs.d/init.el" "/home/aleksss/.emacs.d/settings.org" "/home/aleksss/example/build/.clang_complete" "/home/aleksss/example/.clang_complete" "/home/aleksss/example/hw.cpp" "/home/aleksss/.emacs.d/settings.org" "/home/aleksss/.emacs.d/init.el" "/home/aleksss/example/hw.cpp" "/home/aleksss/example/someheader.h" "/home/aleksss/example/hw.cpp" "/home/aleksss/example/CMakeLists.txt" "/home/aleksss/example/hw.cpp"))
+(setq file-name-history '("/home/aleksss/example/new2.cpp" "/home/aleksss/example/new.cpp" "/home/aleksss/example/hw.cpp" "/home/aleksss/example/new.cpp" "/home/aleksss/.emacs.d/settings.org" "/home/aleksss/example/new.cpp" "/home/aleksss/example/hw.cpp"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 208
-  "/home/aleksss/.emacs.d/settings.org"
-  "settings.org"
-  'org-mode
-  '(visual-line-mode linum-mode global-auto-revert-mode cycle-themes-mode ivy-mode company-mode yas-minor-mode override-global-mode)
-  79
-  '(1 nil)
+  "/home/aleksss/example/new2.cpp"
+  "new2.cpp"
+  'c++-mode
+  '(abbrev-mode visual-line-mode override-global-mode linum-mode global-auto-revert-mode cycle-themes-mode ivy-mode paredit-mode company-mode irony-mode yas-minor-mode hs-minor-mode highlight-indent-guides-mode)
+  1
+  '(nil nil)
   nil
   nil
-  '((buffer-display-time 23698 12987 793802 274000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring (1 1 1 1 1 1 1 1 1 1 5566 5484 5501 5516 5508 79))))
+  '((buffer-display-time 23698 30082 745568 293000) (truncate-lines))
+  '((mark-ring nil)))
 
 (desktop-create-buffer 208
-  "/home/aleksss/.emacs.d_1/settings.org"
-  "settings.org"
-  'org-mode
-  '(visual-line-mode linum-mode global-auto-revert-mode cycle-themes-mode ivy-mode company-mode yas-minor-mode override-global-mode)
-  1597
-  '(5330 nil)
+  "/home/aleksss/example/new.cpp"
+  "new.cpp"
+  'c++-mode
+  '(abbrev-mode visual-line-mode override-global-mode linum-mode global-auto-revert-mode cycle-themes-mode ivy-mode paredit-mode company-mode irony-mode yas-minor-mode hs-minor-mode highlight-indent-guides-mode)
+  1
+  '(nil nil)
   nil
   nil
-  '((buffer-display-time 23698 12981 782816 615000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring (4564 79 20 5 1490 4572 4371 4564 1493 6 1491 5343 5354 5336 5353 1597))))
+  '((buffer-display-time 23698 30080 326818 904000) (truncate-lines))
+  '((mark-ring nil)))
 
 (desktop-create-buffer 208
   "/home/aleksss/example/hw.cpp"
   "hw.cpp"
   'c++-mode
-  '(abbrev-mode visual-line-mode linum-mode global-auto-revert-mode hs-minor-mode cycle-themes-mode ivy-mode company-mode yas-minor-mode irony-mode highlight-indent-guides-mode override-global-mode)
-  206
-  '(191 nil)
+  '(abbrev-mode visual-line-mode override-global-mode linum-mode global-auto-revert-mode cycle-themes-mode ivy-mode paredit-mode company-mode irony-mode yas-minor-mode hs-minor-mode highlight-indent-guides-mode)
+  223
+  '(223 t)
   nil
   nil
-  '((buffer-display-time 23698 12981 782806 830000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring (1 162 123 137 112 207 207 206))))
+  '((buffer-display-time 23698 30069 497892 72000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring (223 223 223 221 219 221 219 222 223 223 223 223 223))))
 
 (desktop-create-buffer 208
-  "/home/aleksss/example/CMakeLists.txt"
-  "CMakeLists.txt"
-  'text-mode
-  '(visual-line-mode linum-mode global-auto-revert-mode cycle-themes-mode ivy-mode company-mode yas-minor-mode override-global-mode)
-  79
-  '(52 nil)
+  "/home/aleksss/.emacs.d/settings.org"
+  "settings.org"
+  'org-mode
+  '(visual-line-mode override-global-mode linum-mode global-auto-revert-mode cycle-themes-mode ivy-mode company-mode yas-minor-mode)
+  3223
+  '(9080 t)
   nil
   nil
-  '((buffer-display-time 23698 12530 897126 154000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
-  '((mark-ring (52 1 79 79 79 52 52 52 79))))
-
-(desktop-create-buffer 208
-  nil
-  "example"
-  'dired-mode
-  '(visual-line-mode linum-mode global-auto-revert-mode cycle-themes-mode ivy-mode company-mode yas-minor-mode override-global-mode)
-  357
-  '(1 nil)
-  t
-  '("/home/aleksss/example/")
-  '((buffer-display-time 23698 10005 999131 100000) (truncate-lines))
-  '((mark-ring (357 353 357))))
-
-(desktop-create-buffer 208
-  "/home/aleksss/.emacs.d/init.el"
-  "init.el"
-  'emacs-lisp-mode
-  '(visual-line-mode eldoc-mode linum-mode global-auto-revert-mode hs-minor-mode cycle-themes-mode ivy-mode company-mode yas-minor-mode override-global-mode)
-  380
-  '(625 nil)
-  nil
-  nil
-  '((buffer-display-time 23698 12921 235298 449000) (buffer-file-coding-system . prefer-utf-8-unix) (truncate-lines))
-  '((mark-ring (625 814 491 635 380 380))))
+  '((buffer-display-time 23698 30080 326821 733000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring (5973 1554 3116 3129 3215 3685 3502 3512 3685 3215 9080))))
 

@@ -1,13 +1,13 @@
-* use package
-*** code
-#+BEGIN_SRC emacs-lisp
-(require 'use-package)
-#+END_SRC
 * packages
 ** melpa
 #+BEGIN_SRC emacs-lisp
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/" ) t)
 (package-initialize)
+#+END_SRC
+* use package
+*** code
+#+BEGIN_SRC emacs-lisp
+(require 'use-package)
 #+END_SRC
 * variabales for modes  
 ** settings
@@ -28,12 +28,12 @@
 (global-hl-line-mode 1)
 (electric-pair-mode 1)
 (show-paren-mode 1)
+(custom-set-faces  '(show-paren-match ((t (:underline "green")))))
 (savehist-mode 1)
 (global-auto-revert-mode 1)
 (global-visual-line-mode 1)
 (desktop-save-mode 1)
 #+END_SRC
-
 ** ido
 *** description
     Interactive-DO.
@@ -64,24 +64,31 @@
 #+END_SRC
 
 * installed packages
+** Dracula theme
+*** code
+#+BEGIN_SRC emacs-lisp
+(use-package dracula-theme
+:ensure t)
+#+END_SRC
 ** ido describe binding
 ** ido grid mode
 #+BEGIN_SRC emacs-lisp
 (ido-grid-mode 1)
 #+END_SRC
-
 ** cycle themes
 *** code
 #+BEGIN_SRC emacs-lisp
 (use-package cycle-themes
+:ensure t
 :init 
-(setq cycle-themes-theme-list '(exotica dracula))
+(setq cycle-themes-theme-list '(dracula exotica))
 :config
 (cycle-themes-mode))
 #+END_SRC
 ** org bullets
 #+BEGIN_SRC emacs-lisp
 (use-package org-bullets
+:ensure t
 :init
 (add-hook 'org-mode-hook (lambda() (org-bullets-mode 1))))
 #+END_SRC
@@ -91,7 +98,10 @@
 
 *** codes
 #+BEGIN_SRC emacs-lisp
+(use-package counsel
+:ensure t)
 (use-package ivy
+:ensure t
 :init
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
@@ -118,11 +128,11 @@
 ("C-r" . counsel-minibuffer-history))
 )
 #+END_SRC
-
 ** magit
 *** code
 #+BEGIN_SRC emacs-lisp
 (use-package magit
+:ensure t
 :bind
 ("C-x g" . magit-status)
 )
@@ -131,24 +141,18 @@
 ** iedit
 *** code
 #+BEGIN_SRC emacs-lisp
-(use-package iedit)
+(use-package iedit
+:ensure t)
 #+END_SRC
 ** paredit
 *** code
 #+BEGIN_SRC emacs-lisp
-;(require 'paredit)
-;(paredit-mode 1)
-;(global-set-key (kbd "C-<left>") 'paredit-forward-slurp-sexp)
-;(global-set-key (kbd "C-M-<left>") 'paredit-backward-slurp-sexp)
-;(global-set-key (kbd "C-<right>") 'paredit-forward-barf-sexp)
-;(global-set-key (kbd "C-M-<right>") 'paredit-backward-barf-sexp)
-;(global-set-key (kbd "M-S") 'paredit-split-sexp)
-;(global-set-key (kbd "M-J") 'paredit-join-sexp)
-
 (use-package paredit
+:ensure t
 :init
 (paredit-mode 1)
-(add-hook 'after-init-hook 'enable-paredit-mode)
+:hook
+(c++-mode . enable-paredit-mode)
 :bind
 ("C-<left>" . paredit-forward-slurp-sexp)
 ("C-M-<left>" . paredit-backward-slurp-sexp)
@@ -163,6 +167,7 @@
 *** code
 #+BEGIN_SRC emacs-lisp
 (use-package irony
+:ensure t
 :hook
 (
 (c++-mode . irony-mode)
@@ -174,6 +179,7 @@
 *** code
 #+BEGIN_SRC emacs-lisp
 (use-package company
+:ensure t
 :hook
 (after-init . global-company-mode)
 :config
@@ -186,6 +192,7 @@
 *** code
 #+BEGIN_SRC emacs-lisp
 (use-package company-quickhelp
+:ensure t
 :init
 (company-quickhelp-mode 1)
 :config
@@ -196,6 +203,7 @@
 *** code
 #+BEGIN_SRC emacs-lisp
 (use-package company-irony
+:ensure t
 :after company
 :init
 (add-to-list 'company-backends 'company-irony))
@@ -204,6 +212,7 @@
 *** code
 #+BEGIN_SRC emacs-lisp
 (use-package company-irony-c-headers
+:ensure t
 :after company
 :init
 (add-to-list
@@ -213,6 +222,7 @@
 *** code
 #+BEGIN_SRC emacs-lisp
 (use-package yasnippet
+:ensure t
 :init
 (yas-global-mode 1)
 (defun check-expansion ()
@@ -244,19 +254,27 @@
 ** ivy yasnippet
 *** code
 #+BEGIN_SRC emacs-lisp
+(use-package ivy-yasnippet
+:ensure t
+:init
 (add-hook 'yas-minor-mode 'ivy-snippet)
-(global-set-key (kbd "M-z") 'ivy-yasnippet)
+:bind
+("M-z" . ivy-yasnippet)
+)
 #+END_SRC
 ** highlight indentation guide
 *** code
 #+BEGIN_SRC emacs-lisp
-(require 'highlight-indent-guides)
-(add-hook 'c++-mode-hook 'highlight-indent-guides-mode)
+(use-package highlight-indent-guides
+:ensure t
+:hook
+(c++-mode . highlight-indent-guides-mode)
+:init
 (setq highlight-indent-guides-method 'character)
+)
 #+END_SRC
 * keybindings
-
-** codes
+*** codes
 #+BEGIN_SRC emacs-lisp
 (global-set-key (kbd "C-?") 'hippie-expand)
 (global-set-key (kbd "M-D") 'backward-kill-word )
@@ -267,17 +285,12 @@
 #+END_SRC
 
 * themes
-
+*** code
 #+BEGIN_SRC emacs-lisp
 (load-theme 'dracula t)
 #+END_SRC
 
-** exotica
-
-** dracula
-
 * good features to remember
-
 ** movement keys
 
    These are some basic key combo in emacs.

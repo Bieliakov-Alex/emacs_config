@@ -1,7 +1,7 @@
-(require 'use-package)
-
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/" ) t)
 (package-initialize)
+
+(require 'use-package)
 
 (menu-bar-mode -1)
 (tool-bar-mode -1)
@@ -18,6 +18,7 @@
 (global-hl-line-mode 1)
 (electric-pair-mode 1)
 (show-paren-mode 1)
+(custom-set-faces  '(show-paren-match ((t (:underline "green")))))
 (savehist-mode 1)
 (global-auto-revert-mode 1)
 (global-visual-line-mode 1)
@@ -38,19 +39,27 @@
 (global-set-key (kbd "C-c @ s") 'hs-show-block)
 (global-set-key (kbd "C-c @ SPC") 'hs-show-all)
 
+(use-package dracula-theme
+:ensure t)
+
 (ido-grid-mode 1)
 
 (use-package cycle-themes
+:ensure t
 :init 
-(setq cycle-themes-theme-list '(exotica dracula))
+(setq cycle-themes-theme-list '(dracula exotica))
 :config
 (cycle-themes-mode))
 
 (use-package org-bullets
+:ensure t
 :init
 (add-hook 'org-mode-hook (lambda() (org-bullets-mode 1))))
 
+(use-package counsel
+:ensure t)
 (use-package ivy
+:ensure t
 :init
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
@@ -78,25 +87,20 @@
 )
 
 (use-package magit
+:ensure t
 :bind
 ("C-x g" . magit-status)
 )
 
-(use-package iedit)
-
-;(require 'paredit)
-;(paredit-mode 1)
-;(global-set-key (kbd "C-<left>") 'paredit-forward-slurp-sexp)
-;(global-set-key (kbd "C-M-<left>") 'paredit-backward-slurp-sexp)
-;(global-set-key (kbd "C-<right>") 'paredit-forward-barf-sexp)
-;(global-set-key (kbd "C-M-<right>") 'paredit-backward-barf-sexp)
-;(global-set-key (kbd "M-S") 'paredit-split-sexp)
-;(global-set-key (kbd "M-J") 'paredit-join-sexp)
+(use-package iedit
+:ensure t)
 
 (use-package paredit
+:ensure t
 :init
 (paredit-mode 1)
-(add-hook 'after-init-hook 'enable-paredit-mode)
+:hook
+(c++-mode . enable-paredit-mode)
 :bind
 ("C-<left>" . paredit-forward-slurp-sexp)
 ("C-M-<left>" . paredit-backward-slurp-sexp)
@@ -107,6 +111,7 @@
 )
 
 (use-package irony
+:ensure t
 :hook
 (
 (c++-mode . irony-mode)
@@ -115,6 +120,7 @@
 ))
 
 (use-package company
+:ensure t
 :hook
 (after-init . global-company-mode)
 :config
@@ -124,6 +130,7 @@
 )
 
 (use-package company-quickhelp
+:ensure t
 :init
 (company-quickhelp-mode 1)
 :config
@@ -131,17 +138,20 @@
 )
 
 (use-package company-irony
+:ensure t
 :after company
 :init
 (add-to-list 'company-backends 'company-irony))
 
 (use-package company-irony-c-headers
+:ensure t
 :after company
 :init
 (add-to-list
 'company-backends '(company-irony-c-headers company-irony)))
 
 (use-package yasnippet
+:ensure t
 :init
 (yas-global-mode 1)
 (defun check-expansion ()
@@ -169,12 +179,21 @@
   ([tab] . tab-indent-or-complete)
 )
 
+(use-package ivy-yasnippet
+:ensure t
+:init
 (add-hook 'yas-minor-mode 'ivy-snippet)
-(global-set-key (kbd "M-z") 'ivy-yasnippet)
+:bind
+("M-z" . ivy-yasnippet)
+)
 
-(require 'highlight-indent-guides)
-(add-hook 'c++-mode-hook 'highlight-indent-guides-mode)
+(use-package highlight-indent-guides
+:ensure t
+:hook
+(c++-mode . highlight-indent-guides-mode)
+:init
 (setq highlight-indent-guides-method 'character)
+)
 
 (global-set-key (kbd "C-?") 'hippie-expand)
 (global-set-key (kbd "M-D") 'backward-kill-word )

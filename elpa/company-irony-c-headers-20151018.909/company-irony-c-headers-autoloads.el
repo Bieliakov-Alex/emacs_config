@@ -19,11 +19,6 @@ Company backend for C/C++ header files.  Taking COMMAND ARG IGNORED.
 
 ;;;***
 
-;;;### (autoloads nil nil ("company-irony-c-headers-pkg.el") (0 0
-;;;;;;  0 0))
-
-;;;***
-
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
