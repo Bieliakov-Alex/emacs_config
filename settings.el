@@ -42,7 +42,12 @@
 (use-package dracula-theme
 :ensure t)
 
+(use-package ido-grid-mode
+:ensure t
+:init
 (ido-grid-mode 1)
+)
+;(ido-grid-mode 1)
 
 (use-package cycle-themes
 :ensure t

@@ -5,17 +5,19 @@
 (package-initialize)
 
 (require 'package)
-  (setq package-archives '(("MELPA" . "http://melpa.org/packages/")
-		   ("ELPA" . "http://tromey.com/elpa/")
-		   ("gnu"  . "http://elpa.gnu.org/packages/"))
-load-prefer-newer t
-package-user-dir "~/.emacs.d/elpa"
-package--init-file-ensured t
-package-enable-at-startup nil)
-  (unless (file-directory-p package-user-dir)
-    (make-directory package-user-dir t))
-  (package-initialize)
+(setq package-enable-at-startup nil)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
+(package-initialize)
 
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(eval-when-compile
+  (require 'use-package))
+(require 'bind-key)
 
 (require 'org)
 (org-babel-load-file (expand-file-name "~/.emacs.d/settings.org"))

@@ -72,8 +72,14 @@
 #+END_SRC
 ** ido describe binding
 ** ido grid mode
+*** code
 #+BEGIN_SRC emacs-lisp
+(use-package ido-grid-mode
+:ensure t
+:init
 (ido-grid-mode 1)
+)
+;(ido-grid-mode 1)
 #+END_SRC
 ** cycle themes
 *** code
@@ -355,5 +361,4 @@
  | M-@       | mark next word                  |
  | C-M-@     | mark next s expression          |
  |-----------+---------------------------------|
-
 
