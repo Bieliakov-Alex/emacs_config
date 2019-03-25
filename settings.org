@@ -34,19 +34,6 @@
 (global-visual-line-mode 1)
 (desktop-save-mode 1)
 #+END_SRC
-** ido
-*** description
-    Interactive-DO.
-*** codes
-#+BEGIN_SRC emacs-lisp
-;(ido-mode 1)
-;(setq ido-everywhere t)
-;(setq ido-enable-flex-matching t)
-;(setq ido-use-filename-at-point 'guess)
-;(setq ido-create-new-buffer 'always)
-;(setq ido-file-extension-order '(".org" ".txt" ".csv"))
-#+END_SRC
-
 ** winner mode
 *** code
 #+BEGIN_SRC emacs-lisp
@@ -69,17 +56,6 @@
 #+BEGIN_SRC emacs-lisp
 (use-package dracula-theme
 :ensure t)
-#+END_SRC
-** ido describe binding
-** ido grid mode
-*** code
-#+BEGIN_SRC emacs-lisp
-;(use-package ido-grid-mode
-;:ensure t
-;:init
-;(ido-grid-mode 1)
-;)
-;(ido-grid-mode 1)
 #+END_SRC
 ** helm
 *** code
