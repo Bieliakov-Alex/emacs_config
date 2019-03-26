@@ -447,6 +447,18 @@
 :ensure t)
 )
 #+END_SRC
+** cmake-project
+*** code
+#+BEGIN_SRC emacs-lisp
+(use-package cmake-project
+:ensure t
+:init
+(defun maybe-cmake-project-hook ()
+(if (file-exists-p "CMakeLists.txt") (cmake-project-mode)))
+(add-hook 'c-mode-hook #'maybe-cmake-project-mode)
+(add-hook 'c++-mode-hook #'maybe-cmake-project-mode)
+)
+#+END_SRC
 * keybindings
 *** codes
 #+BEGIN_SRC emacs-lisp
