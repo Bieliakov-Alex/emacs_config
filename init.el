@@ -1,4 +1,6 @@
-
+;;; init.el --- Summary
+;;; Commentary:
+;;; Code:
 (package-initialize)
 
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/" ) t)
@@ -21,3 +23,5 @@
 
 (require 'org)
 (org-babel-load-file (expand-file-name "~/.emacs.d/settings.org"))
+(provide 'init)
+;;; init.el ends here

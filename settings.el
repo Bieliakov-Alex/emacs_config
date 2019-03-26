@@ -182,6 +182,8 @@
 
 ;(helm-mode 1)
 
+(use-package all-the-icons
+:ensure t)
 (use-package neotree
 :ensure t
 :bind
@@ -340,6 +342,18 @@
 (c++-mode . highlight-indent-guides-mode)
 :init
 (setq highlight-indent-guides-method 'character)
+)
+
+(use-package flycheck
+:ensure t
+:init
+(global-flycheck-mode)
+)
+(use-package flycheck-irony
+:ensure t
+:after flycheck
+:init
+(add-hook 'flycheck-mode-hook #'flycheck-irony-setup)
 )
 
 (global-set-key (kbd "C-?") 'hippie-expand)

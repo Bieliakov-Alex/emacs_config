@@ -419,6 +419,21 @@
 (setq highlight-indent-guides-method 'character)
 )
 #+END_SRC
+** flycheck
+*** code
+#+BEGIN_SRC emacs-lisp
+(use-package flycheck
+:ensure t
+:init
+(global-flycheck-mode)
+)
+(use-package flycheck-irony
+:ensure t
+:after flycheck
+:init
+(add-hook 'flycheck-mode-hook #'flycheck-irony-setup)
+)
+#+END_SRC
 * keybindings
 *** codes
 #+BEGIN_SRC emacs-lisp
