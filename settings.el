@@ -24,13 +24,6 @@
 (global-visual-line-mode 1)
 (desktop-save-mode 1)
 
-;(ido-mode 1)
-;(setq ido-everywhere t)
-;(setq ido-enable-flex-matching t)
-;(setq ido-use-filename-at-point 'guess)
-;(setq ido-create-new-buffer 'always)
-;(setq ido-file-extension-order '(".org" ".txt" ".csv"))
-
 (winner-mode 1)
 
 (add-hook 'prog-mode-hook (lambda () (hs-minor-mode 1)))
@@ -41,13 +34,6 @@
 
 (use-package dracula-theme
 :ensure t)
-
-;(use-package ido-grid-mode
-;:ensure t
-;:init
-;(ido-grid-mode 1)
-;)
-;(ido-grid-mode 1)
 
 (use-package helm
 :ensure t
@@ -195,6 +181,15 @@
 ;(provide 'setup-helm)
 
 ;(helm-mode 1)
+
+(use-package neotree
+:ensure t
+:bind
+(([f8] . neotree-toggle)
+)
+:init
+(setq neo-theme (if(display-graphic-p) 'icons 'arrow))
+)
 
 (use-package cycle-themes
 :ensure t
