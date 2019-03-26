@@ -23,6 +23,8 @@
 (global-auto-revert-mode 1)
 (global-visual-line-mode 1)
 (desktop-save-mode 1)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+(setq require-final-newline t)
 
 (winner-mode 1)
 
@@ -195,7 +197,7 @@
 
 (use-package cycle-themes
 :ensure t
-:init 
+:init
 (setq cycle-themes-theme-list '(dracula exotica))
 :config
 (cycle-themes-mode))
@@ -354,6 +356,14 @@
 :after flycheck
 :init
 (add-hook 'flycheck-mode-hook #'flycheck-irony-setup)
+)
+
+(use-package cmake-mode
+:ensure t
+:mode ("\\.cmake\\'"
+"CMakeLists\\.txt\\'")
+:config (use-package cmake-font-lock
+:ensure t)
 )
 
 (global-set-key (kbd "C-?") 'hippie-expand)
