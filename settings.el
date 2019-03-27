@@ -377,6 +377,17 @@
 
 ;; only run this if rtags is installed
 (when (require 'rtags nil :noerror)
+  ;; https://github.com/Andersbakken/rtags#optional-1
+  (defun setup-flycheck-rtags ()
+    (interactive)
+    (flycheck-select-checker 'rtags)
+    ;; RTags creates more accurate overlays.
+    (setq-local flycheck-highlighting-mode nil)
+    (setq-local flycheck-check-syntax-automatically nil))
+
+(use-package rtags
+:ensure t
+:init
   ;; make sure you have company-mode installed
   (require 'company)
   (define-key c-mode-base-map (kbd "M-.")
@@ -401,8 +412,27 @@
   (require 'flycheck-rtags)
   ;; c-mode-common-hook is also called by c++-mode
   (add-hook 'c-mode-common-hook #'setup-flycheck-rtags))
+  (use-package company
+:ensure t)
+:bind(
+:map c-mode-base-map
+("M-." . rtags-find-symbol-at-point)
+("M-," . rtags-find-references-at-point)
+("<C-tab>" . company-complete)
+)
+:init
+(rtags-enable-standard-keybindings)
+(setq rtags-use-helm t)
+(setq rtags-autostart-diagnostics t)
+(rtags-diagnostics)
+(setq rtags-completions-enabled t)
+(push 'company-rtags company-backends)
+(global-company-mode)
+(use-package flycheck-rtags
+:ensure t)
+(add-hook 'c-mode-common-hook #'setup-flycheck-rtags)
 (add-hook 'c-mode-hook 'rtags-start-process-unless-running)
-(add-hook 'c++-mode-hook 'rtags-start-process-unless-running)
+(add-hook 'c++-mode-hook 'rtags-start-process-unless-running))
 
 (global-set-key (kbd "C-?") 'hippie-expand)
 (global-set-key (kbd "M-D") 'backward-kill-word )
