@@ -434,6 +434,13 @@
 (add-hook 'c-mode-hook 'rtags-start-process-unless-running)
 (add-hook 'c++-mode-hook 'rtags-start-process-unless-running))
 
+(use-package clang-format
+:ensure t
+:bind(
+("C-c i" . clang-format-region)
+("C-c u" . clang-format-buffer)
+))
+
 (global-set-key (kbd "C-?") 'hippie-expand)
 (global-set-key (kbd "M-D") 'backward-kill-word )
 (global-set-key (kbd "DEL") 'backward-delete-char)
