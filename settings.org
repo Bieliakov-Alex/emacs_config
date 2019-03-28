@@ -459,7 +459,7 @@
 :ensure t
 :init
   ;; make sure you have company-mode installed
-  (use-package company
+(use-package company
 :ensure t)
 :bind(
 :map c-mode-base-map
@@ -477,34 +477,8 @@
 (global-company-mode)
 (use-package flycheck-rtags
 :ensure t)
-(add-hook 'c-mode-common-hook #'setup-flycheck-rtags)
 (add-hook 'c-mode-hook 'rtags-start-process-unless-running)
 (add-hook 'c++-mode-hook 'rtags-start-process-unless-running))
-  (use-package rtags
-  :ensure t
-  :init
-    ;; make sure you have company-mode installed
-    (use-package company
-  :ensure t)
-  :bind(
-  :map c-mode-base-map
-  ("M-." . rtags-find-symbol-at-point)
-  ("M-," . rtags-find-references-at-point)
-  ("<C-tab>" . company-complete)
-  )
-  :init
-  (rtags-enable-standard-keybindings)
-  (setq rtags-use-helm t)
-  (setq rtags-autostart-diagnostics t)
-  (rtags-diagnostics)
-  (setq rtags-completions-enabled t)
-  ;(push 'company-rtags company-backends)
-  (global-company-mode)
-  (use-package flycheck-rtags
-  :ensure t)
-  ;(add-hook 'c-mode-common-hook #'setup-flycheck-rtags)
-  (add-hook 'c-mode-hook 'rtags-start-process-unless-running)
-  (add-hook 'c++-mode-hook 'rtags-start-process-unless-running))
 #+END_SRC
 ** clang-format
 *** code
