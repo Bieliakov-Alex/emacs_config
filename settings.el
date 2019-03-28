@@ -426,11 +426,11 @@
 (setq rtags-autostart-diagnostics t)
 (rtags-diagnostics)
 (setq rtags-completions-enabled t)
-(push 'company-rtags company-backends)
+;(push 'company-rtags company-backends)
 (global-company-mode)
 (use-package flycheck-rtags
 :ensure t)
-(add-hook 'c-mode-common-hook #'setup-flycheck-rtags)
+;(add-hook 'c-mode-common-hook #'setup-flycheck-rtags)
 (add-hook 'c-mode-hook 'rtags-start-process-unless-running)
 (add-hook 'c++-mode-hook 'rtags-start-process-unless-running))
 
