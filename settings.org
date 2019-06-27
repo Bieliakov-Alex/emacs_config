@@ -234,6 +234,7 @@
 (cycle-themes-mode))
 #+END_SRC
 ** org bullets
+*** code
 #+BEGIN_SRC emacs-lisp
 (use-package org-bullets
 :ensure t
@@ -489,6 +490,20 @@
 ("C-c i" . clang-format-region)
 ("C-c u" . clang-format-buffer)
 ))
+#+END_SRC
+** git-commit
+*** description
+Formatting git commit message.
+*** code
+#+BEGIN_SRC emacs-lisp
+(use-package git-commit
+  :ensure nil
+  :preface
+  (defun me/git-commit-set-fill-column ()
+    (setq-local comment-auto-fill-only-comments nil)
+    (setq fill-column 72))
+  :config
+  (advice-add 'git-commit-turn-on-auto-fill :before #'me/git-commit-set-fill-column))
 #+END_SRC
 * keybindings
 *** codes
