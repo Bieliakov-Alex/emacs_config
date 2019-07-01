@@ -497,13 +497,36 @@ Formatting git commit message.
 *** code
 #+BEGIN_SRC emacs-lisp
 (use-package git-commit
-  :ensure nil
+  :ensure t
   :preface
   (defun me/git-commit-set-fill-column ()
     (setq-local comment-auto-fill-only-comments nil)
     (setq fill-column 72))
   :config
   (advice-add 'git-commit-turn-on-auto-fill :before #'me/git-commit-set-fill-column))
+#+END_SRC
+
+** flymake-google-cpplint
+*** code
+#+BEGIN_SRC emacs-lisp
+(use-package flymake-google-cpplint
+:ensure t
+:preface
+(defun my:flymake-google-init()
+(flymake-google-cpplint-load)
+)
+:init
+(custom-set-variables
+'(flymake-google-cpplint-command "/home/obieliakov/.local/bin/cpplint"))
+(add-hook 'c-mode-hook #'my:flymake-google-init)
+(add-hook 'c++-mode-hook #'my:flymake-google-init)
+)
+#+END_SRC
+** flymake-cursor
+*** code
+#+BEGIN_SRC emacs-lisp
+(use-package flymake-cursor
+:ensure t)
 #+END_SRC
 * keybindings
 *** codes
