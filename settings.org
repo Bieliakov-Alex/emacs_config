@@ -518,6 +518,7 @@ Formatting git commit message.
 :init
 (custom-set-variables
 '(flymake-google-cpplint-command "/home/aleksss/.local/bin/cpplint"))
+'(flymake-google-cpplint-linelength "120"))
 (add-hook 'c-mode-hook #'my:flymake-google-init)
 (add-hook 'c++-mode-hook #'my:flymake-google-init)
 )
