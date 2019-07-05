@@ -564,6 +564,14 @@ Functions to set window width to exact value
 
 (global-set-key "\C-x~" 'set-120-columns)
 #+END_SRC
+** highlighting trailing whitespace's and tabs
+*** code
+#+BEGIN_SRC emacs-lisp
+(setq whitespace-style '(face trailing tabs))
+(custom-set-faces
+ '(whitespace-tab ((t (:background "red")))))
+(global-whitespace-mode)
+#+END_SRC
 * themes
 *** code
 #+BEGIN_SRC emacs-lisp
