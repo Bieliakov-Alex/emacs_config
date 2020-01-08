@@ -434,6 +434,7 @@
 :ensure t
 :init
 (global-flycheck-mode)
+(setq flycheck-python-pycompile-executable "python3")
 )
 (use-package flycheck-irony
 :ensure t
@@ -534,6 +535,16 @@ https://github.com/akash-akya/emacs-flymake-cursor
   :load-path "~/.emacs.d/lisp/emacs-flymake-cursor" ;; cloned repo path
   :config
   (flymake-cursor-mode))
+#+END_SRC
+** autopep8
+*** code
+#+BEGIN_SRC emacs-lisp
+(use-package py-autopep8
+:ensure t
+:init
+;(setq py-autopep8-options '("--max-line-length=120"))
+(add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
+)
 #+END_SRC
 * keybindings
 *** codes
