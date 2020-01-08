@@ -583,6 +583,18 @@ Functions to set window width to exact value
  '(whitespace-tab ((t (:background "red")))))
 (global-whitespace-mode)
 #+END_SRC
+
+** killing all buffers
+*** code
+#+BEGIN_SRC emacs-lisp
+; function to kill all buffers
+(defun kill-other-buffers ()
+    "Kill all other buffers."
+    (interactive)
+    (mapc 'kill-buffer
+          (delq (current-buffer)
+                (cl-remove-if-not 'buffer-file-name (buffer-list)))))
+#+END_SRC
 * themes
 *** code
 #+BEGIN_SRC emacs-lisp
