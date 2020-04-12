@@ -64,6 +64,7 @@
 #+BEGIN_SRC emacs-lisp
 (use-package helm
 :ensure t
+:diminish helm-mode
   :init
   (progn
     (require 'helm-config)
@@ -329,6 +330,7 @@
 #+BEGIN_SRC emacs-lisp
 (use-package company
 :ensure t
+:diminish company-mode
 :hook
 (after-init . global-company-mode)
 :config
@@ -365,7 +367,10 @@
 :after company
 :init
 (add-to-list
-'company-backends '(company-irony-c-headers company-irony)))
+'company-backends '(company-irony-c-headers company-irony)
+)
+(add-hook 'c++-mode-hook 'irony-cdb-autosetup-compile-options)
+)
 #+END_SRC
 ** yasnippet
 *** code
@@ -546,6 +551,19 @@ https://github.com/akash-akya/emacs-flymake-cursor
 (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
 )
 #+END_SRC
+** cmake-ide
+*** code
+#+BEGIN_SRC emacs-lisp
+(use-package cmake-ide
+:ensure t
+:commands c++mode
+:init
+)
+(bind-keys :prefix "C-q"
+:prefix-map my-prefix-map
+("C-c" . cmake-ide-compile)
+)
+#+END_SRC
 * keybindings
 *** codes
 #+BEGIN_SRC emacs-lisp
@@ -594,6 +612,11 @@ Functions to set window width to exact value
     (mapc 'kill-buffer
           (delq (current-buffer)
                 (cl-remove-if-not 'buffer-file-name (buffer-list)))))
+#+END_SRC
+** Dired guess mode
+*** code
+#+BEGIN_SRC emacs-lisp
+(setq dired-dwim-target t)
 #+END_SRC
 * themes
 *** code
