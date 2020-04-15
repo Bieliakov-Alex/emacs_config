@@ -565,6 +565,16 @@ https://github.com/akash-akya/emacs-flymake-cursor
 ("C-c" . cmake-ide-compile)
 )
 #+END_SRC
+** qml
+*** code
+#+BEGIN_SRC emacs-lisp
+(use-package qml-mode
+:ensure t
+:init
+(autoload 'qml-mode "qml-mode" "Editing Qt Declarative." t)
+(add-to-list 'auto-mode-alist '("\\.qml$" . qml-mode))
+)
+#+END_SRC
 * keybindings
 *** codes
 #+BEGIN_SRC emacs-lisp
